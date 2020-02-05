@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700,800|Satisfy&display=swap');
+
+.f-r{
+  font-family: 'Raleway','Arial';
+}
+
+.f-s{
+  font-family: 'Satisfy','Arial';
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -619,4 +629,40 @@ pre tt:after {
   html {
     font-size: 100%;
   }
+}
+
+.content{
+  max-width: 1140px;
+  margin:0 auto;
+}
+
+*{
+  font-family:'Raleway';
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-50px,0,0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}   
+
+.orange-color{
+  color:#F6A500;
+}
+
+.white-color{
+  color:#FFF;
+}
+
+.bolder{
+  font-weight: bolder;
+}
+
+.txt-uppercase{
+  text-transform:uppercase;
 }
