@@ -36,21 +36,6 @@ export const SectionAbout = styled.section`
     padding:105px 0;
 `
 
-export const TitleAbout = styled.h1`
-    color:#F6A500;
-    text-transform:uppercase;
-    font-size:1em;
-    display:flex;
-    align-items:center;
-    &:before{
-        content:'';
-        display:block;
-        width:100px;
-        height:2.5px;
-        background:#F6A500;
-        margin-right:25px;
-    }
-`
 
 export const WrapperAboutText = styled.div`
     padding:45px 10px;

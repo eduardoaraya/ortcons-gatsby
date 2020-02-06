@@ -10,7 +10,8 @@ export const HeaderTop = styled.header`
     left:0;
     background:${ (props) => props.transparent ? 'transparent' : 'rgba(19,18,21)'};
     &.active{
-        background:rgba(19,18,21,.75);
+        background:rgba(19,18,21,.85);
+        box-shadow:0px 5px 8px -5px rgba(19,18,21,.75);
     }
 `
 
@@ -52,7 +53,7 @@ export const Navigator = styled.nav`
 export const MenuList = styled.ul`
     position:relative;
     width:100%;
-    height:100%;
+    height:130px;
     padding:0;
     display:flex;
     align-items:center;
@@ -61,11 +62,31 @@ export const MenuList = styled.ul`
 `
 
 export const MenuItem = styled.li`
-    padding:10px 15px;
+    margin:0px;
+    height:100%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transition:.3s;
+    user-select:none;
+    cursor: pointer;
     a{
+        box-shadow: inset 0 15px 1px -5px transparent;
+        padding:10px 25px;
+        height:100%;    
+        display:block;
+        flex:1;
         text-decoration:none;
         color:#FFF;
         text-transform:uppercase;
         font-size:.75em;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        &.active,&:hover{
+            box-shadow: inset 0 10px 1px -5px #F6A500;
+            color:#F6A500;
+        }
     }
 `

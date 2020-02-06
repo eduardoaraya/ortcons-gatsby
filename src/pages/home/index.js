@@ -2,14 +2,22 @@ import React from 'react';
 import { Link } from "gatsby";
 
 import Banner from '../../components/banner/banner';
+
 import {
     SectionDevelopment,
     Box,
     SectionAbout,
-    TitleAbout,
     WrapperAboutText
 } from './styled';
-import { Container, Flex, Button, CallAction, FlexCenter } from '../../shared/styled-shared'
+
+import {
+    Container,
+    Flex,
+    Button,
+    CallAction,
+    FlexCenter,
+    TitleAbout
+} from '../../shared/styled-shared'
 
 import Rectangle1 from '../../assets/imgs/Rectangle1.png';
 import Rectangle2 from '../../assets/imgs/Rectangle2.png';
@@ -44,9 +52,9 @@ export default function home() {
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
                                 com o <span className="orange-color bolder">compromisso</span> de
-                                                                construir empreendimentos
-                                                                de médio e alto padrão
-                                                                com excelência.
+                                                                                construir empreendimentos
+                                                                                de médio e alto padrão
+                                                                                com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>

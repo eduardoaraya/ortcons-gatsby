@@ -4,7 +4,7 @@ import Layout from '../../components/layout';
 const development = () => {
     return (
         <Layout>
-
+            teste
         </Layout>
     )
 }

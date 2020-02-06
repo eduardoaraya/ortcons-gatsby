@@ -40,10 +40,10 @@ const Header = ({ transparent }) => {
         <Logo src={logo} />
         <Navigator>
           <MenuList>
-            <MenuItem><Link to="/home">Home</Link></MenuItem>
-            <MenuItem><Link>Empreendimento</Link></MenuItem>
-            <MenuItem><Link to="/about">A Ortcons</Link></MenuItem>
-            <MenuItem><Link>Contato</Link></MenuItem>
+            <MenuItem><Link activeClassName="active" to="/home">Home</Link></MenuItem>
+            <MenuItem><Link activeClassName="active" to="/development">Empreendimento</Link></MenuItem>
+            <MenuItem><Link activeClassName="active" to="/about">A Ortcons</Link></MenuItem>
+            <MenuItem><Link activeClassName="active" to="/contact">Contato</Link></MenuItem>
           </MenuList>
           <Phones>
             <Phone>

@@ -6,9 +6,25 @@ export const Container = styled.div`
     margin:0 auto;
 `
 
+export const TitleAbout = styled.h1`
+    color:#F6A500;
+    text-transform:uppercase;
+    font-size:${ (props) => props.size ? props.size : '1em'};
+    display:flex;
+    align-items:center;
+    &:before{
+        content:'';
+        display:block;
+        width:100px;
+        height:2.5px;
+        background:#F6A500;
+        margin-right:25px;
+    }
+`
 
 
 export const Flex = styled.div`
+    position:relative;
     display:flex;
     position:relative;
     height:100%;
@@ -128,3 +144,12 @@ export const CallAction = styled.div`
     }
 `
 
+export const Box = styled.div`
+    position:relative;
+    background:url(${(props) => props.backgroundImage ? props.backgroundImage : '#E5E5E5'});
+    display:block;
+    width:${(props) => props.width};
+    height:${(props) => props.height};
+    padding:${(props) => props.padding};
+    margin:${(props) => props.margin};
+`
