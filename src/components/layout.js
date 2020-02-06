@@ -14,7 +14,7 @@ import Footer from "./footer/footer"
 
 import "./layout.css"
 
-const Layout = ({ children, transparentHeader }) => {
+const Layout = ({ children, transparentHeader, hidfenFooter = false }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -29,7 +29,7 @@ const Layout = ({ children, transparentHeader }) => {
     <>
       <Header transparent={transparentHeader} />
       <main>{children}</main>
-      <Footer />
+      {!hidfenFooter && <Footer />}
     </>
   )
 }

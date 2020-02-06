@@ -5,7 +5,8 @@ import styled from 'styled-components';
 const CustomInput = styled.input`
     border:none;
     outline:none;
-    border-bottom:solid 2px #222;
+    border-bottom:solid 1px #F6A500;
+    color:#FFF;
     background:transparent;
     height:55px;
     width:100%;

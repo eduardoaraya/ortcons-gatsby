@@ -2,9 +2,10 @@ import React from 'react';
 
 import { Footer, Logo, Grid } from './styled';
 import { Container, Column, Phone, FlexList, Flex, Button } from '../../shared/styled-shared';
+import FormContact from '../form-contact';
+import bg from '../../assets/imgs/footer.png';
+import logo from "../../assets/imgs/logo.png";
 
-import bg from '../../assets/imgs/footer.png'
-import logo from "../../assets/imgs/logo.png"
 
 export default function footer() {
     return (
