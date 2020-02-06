@@ -4,10 +4,6 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Home from './home';
 
-const IndexPage = () => (
-  <Layout>
-    <Home />
-  </Layout>
-)
+const IndexPage = () => <Home />
 
 export default IndexPage

@@ -17,29 +17,32 @@ import {
 } from '../../shared/styled-shared';
 
 
-const Header = () => {
+const Header = ({ transparent }) => {
 
   const [fixed, setFixed] = useState(false);
 
+  function handleScrollHeader() {
+    if (window.scrollY > 100) {
+      setFixed(true)
+    } else {
+      setFixed(false)
+    }
+  }
+
   useEffect(() => {
-    window.addEventListener('scroll', (e) => {
-      if (window.scrollY > 100) {
-        setFixed(true)
-      } else {
-        setFixed(false)
-      }
-    })
+    window.addEventListener('scroll', (e) => handleScrollHeader())
+    return () => window.removeEventListener('scroll', handleScrollHeader);
   }, [])
 
   return (
-    <HeaderTop className={fixed && 'active'}>
+    <HeaderTop transparent={transparent} className={fixed && 'active'}>
       <Container>
         <Logo src={logo} />
         <Navigator>
           <MenuList>
-            <MenuItem><Link>Home</Link></MenuItem>
+            <MenuItem><Link to="/home">Home</Link></MenuItem>
             <MenuItem><Link>Empreendimento</Link></MenuItem>
-            <MenuItem><Link>A Ortcons</Link></MenuItem>
+            <MenuItem><Link to="/about">A Ortcons</Link></MenuItem>
             <MenuItem><Link>Contato</Link></MenuItem>
           </MenuList>
           <Phones>

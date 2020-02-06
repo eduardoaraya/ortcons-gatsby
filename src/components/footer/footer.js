@@ -21,7 +21,7 @@ export default function footer() {
                     <Column>
                         <div className="separator">
                             <h4 className="orange-color">Onde estamos</h4>
-                            <p class="white-color">
+                            <p className="white-color">
                                 Rua Nossa Senhora do Rosário - 480
                                 Sala 01 e 02 | Palhoça - SC
                                 CEP 88138-800
@@ -68,14 +68,14 @@ export default function footer() {
                     <Column>
                         <div className="separator">
                             <h4 className="orange-color">Central de vendas</h4>
-                            <p class="white-color">
+                            <p className="white-color">
                                 48. 3017.0700<br />
                                 contato@ortcons.com.br
                             </p>
                         </div>
                         <div className="separator">
                             <h4 className="orange-color">Whatsapp</h4>
-                            <p class="white-color">
+                            <p className="white-color">
                                 48 9987.65432
                             </p>
                         </div>

@@ -6,9 +6,11 @@ export const HeaderTop = styled.header`
     position:fixed;
     z-index:9999;
     transition:.3s;
+    top:0;
+    left:0;
+    background:${ (props) => props.transparent ? 'transparent' : 'rgba(19,18,21)'};
     &.active{
-        background:rgba(0,0,0,.85);
-        /* height:100px;    */
+        background:rgba(19,18,21,.75);
     }
 `
 

@@ -13,10 +13,11 @@ import { Container, Flex, Button, CallAction, FlexCenter } from '../../shared/st
 
 import Rectangle1 from '../../assets/imgs/Rectangle1.png';
 import Rectangle2 from '../../assets/imgs/Rectangle2.png';
+import Layout from '../../components/layout';
 
 export default function home() {
     return (
-        <>
+        <Layout transparentHeader={true}>
             <Banner></Banner>
             <SectionDevelopment>
                 <Flex>
@@ -43,9 +44,9 @@ export default function home() {
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
                                 com o <span className="orange-color bolder">compromisso</span> de
-                                                    construir empreendimentos
-                                                    de médio e alto padrão
-                                                    com excelência.
+                                                                construir empreendimentos
+                                                                de médio e alto padrão
+                                                                com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>
@@ -69,6 +70,6 @@ export default function home() {
                     </Flex>
                 </Container>
             </SectionAbout>
-        </>
+        </Layout>
     );
 }
