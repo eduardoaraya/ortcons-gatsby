@@ -25,7 +25,7 @@ const Wrapper = styled.div`
     width:100%;
     height:auto;
     background:#131416;
-    border-top:solid 5px #F6A500;
+    /* border-top:solid 5px #F6A500; */
 `
 
 export default function FormRequestWorking() {

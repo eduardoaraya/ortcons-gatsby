@@ -6,7 +6,7 @@ import { Container, Column, FlexList } from '../../shared/styled-shared'
 import FormContact from '../../components/form-contact'
 import bg from '../../assets/imgs/footer.png'
 
-const contact = () => {
+const Contact = () => {
     return (
         <Layout hidfenFooter={true}>
             <SectionContact backgroundImage={bg}>
@@ -80,4 +80,4 @@ const contact = () => {
     )
 }
 
-export default contact;
+export default Contact;

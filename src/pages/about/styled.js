@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-
 export const SectionAbout = styled.section`
     min-height:600px;
     margin-top:130px;
@@ -16,7 +15,6 @@ export const SectionAbout = styled.section`
         }
     }
 `
-
 
 export const ImageBanner = styled.div`
     width:50%;

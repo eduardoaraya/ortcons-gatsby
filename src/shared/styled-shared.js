@@ -12,6 +12,9 @@ export const TitleAbout = styled.h1`
     font-size:${ (props) => props.size ? props.size : '1em'};
     display:flex;
     align-items:center;
+    &.black-color{
+        color:#131416;
+    }
     &:before{
         content:'';
         display:block;
@@ -69,9 +72,16 @@ export const Button = styled.button`
     padding:10px 25px; 
     font-size:${ props => props.fontSize ? props.fontSize : '1em'};
     width:${ props => props.width ? props.width : 'auto'};
+    height:${ props => props.height ? props.height : 'auto'};
     cursor: pointer;
     font-weight:bold;
     transition:.3s;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    svg{
+        margin:0;
+    }
     &.btn-icon{
         display:flex;
         justify-content:space-between;
@@ -172,7 +182,7 @@ export const Box = styled.div`
 
 export const Grid = styled.div`
     display:grid;
-    grid-template-columns:1fr 557px 557px 1fr;
+    grid-template-columns:1fr 2fr 657px 1fr;
     grid-auto-rows:auto;
     width:100%;
     height:100%;

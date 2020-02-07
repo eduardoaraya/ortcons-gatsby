@@ -1,17 +1,56 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Layout from '../../components/layout';
 
-import { SectionDevelopment, Box } from './styled';
-import { Container, Grid, FlexList } from '../../shared/styled-shared';
+import { SectionDevelopment, Box, MaxImage, WrapperImage, MinImage, ListMin } from './styled';
+import { Grid, FlexList, Button } from '../../shared/styled-shared';
 
-import bg from '../../assets/imgs/Rectangle2.png'
 
-const development = () => {
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import { Carousel } from 'react-responsive-carousel';
+import Data from './data';
+
+
+
+const Development = () => {
+
+    const [imageActive, setImageActive] = useState([]);
+    const [arrayImages, setArrayImages] = useState([]);
+
+    useEffect(async () => {
+        const imgs = await Data.imgs.map((item, index) => {
+            return {
+                id: index,
+                img: item
+            }
+        })
+        setImageActive(imgs[0])
+        setArrayImages(imgs)
+    }, []);
+
+    const handleClickImage = (index) => {
+        return setImageActive(arrayImages[index]);
+    }
+
     return (
         <Layout>
             <SectionDevelopment>
                 <Grid>
-                    <Box className="bg" background={bg}></Box>
+                    <ListMin>
+                        {arrayImages.map((item, index) => <MinImage key={item.id} className={imageActive.id == item.id ? 'active' : ''} onClick={() => handleClickImage(item.id)} src={item.img}></MinImage>)}
+                    </ListMin>
+                    <WrapperImage>
+                        <MaxImage src={imageActive.img}></MaxImage>
+                        <Button className="btn-zoom" color="#FFF" background="#131416" width="50px" height="50px">
+                            <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.4924 1L1.5 18.9924" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M14.4473 1.0072H19.4852V6.04508" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M6.53788 18.9924H1.5V13.9546" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.4924 19.0004L1.5 1.008" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M19.4852 13.9546V18.9924H14.4473" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M1.5 6.04588V1.008H6.53788" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </Button>
+                    </WrapperImage>
                     <Box className="content">
                         <h1>RESERVA DO TABULEIRO</h1>
                         <p>Você de frente para o melhor da vida! O Reserva do Tabuleiro é um empreendimento moderno e refinado, pensado para você que busca conforto, bom gosto e bem-estar. Localizado de frente para a Serra do Tabuleiro em Palhoça/SC, é o encontro perfeito do estilo de vida urbano com a natureza, garantindo a qualidade de vida que você merece. São apartamentos deslumbrantes de até 74m² com 1 e 2 dormitórios, ampla sala de estar, cozinha americana, área de serviço, sacada e churrasqueira. Tudo isso a poucos metros de uma área de mais de 80 hectares de puro verde. Além disso, sua infraestrutura possui Salão de Festas, Skylounge e ainda conta com uma área comercial no andar térreo do prédio, onde lojas de diferentes tipos de produtos e serviços estarão ao alcance do elevador. Muito mais praticidade para a sua vida. Venha viver de frente para o melhor da vida. Venha para o Reserva do Tabuleiro.</p>
@@ -59,8 +98,8 @@ const development = () => {
                     </Box>
                 </Grid>
             </SectionDevelopment>
-        </Layout>
+        </Layout >
     )
 }
 
-export default development;
+export default Development;
