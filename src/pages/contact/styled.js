@@ -21,6 +21,10 @@ export const SectionContact = styled.section`
         grid-column:3/5;
         padding:15px;
     }
+    .phrase{
+        grid-row:3/5;
+        grid-column:1/2;
+    }
     .person{
         grid-row:1/5;
         grid-column:1/2;
@@ -46,8 +50,12 @@ export const SectionContact = styled.section`
         }
     }
     .separator{
-        font-size:.85em;
+        font-size:.75em;
+        h4{
+            text-transform:uppercase;
+        }
     }
+    
 `
 
 export const Footer = styled.footer`

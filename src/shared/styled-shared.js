@@ -37,6 +37,7 @@ export const FlexList = styled.ul`
     flex-direction:${props => props.flow};
     padding:0;
     list-style:none;
+    justify-content: ${ (props) => props.justifyContent ? props.justifyContent : 'inherit'};
 `
 
 
@@ -70,11 +71,19 @@ export const Button = styled.button`
     width:${ props => props.width ? props.width : 'auto'};
     cursor: pointer;
     font-weight:bold;
+    transition:.3s;
     &.btn-icon{
         display:flex;
         justify-content:space-between;
         align-items:center;
     }
+    &:hover{
+        color:#F6A500;
+        background-color:#131416;
+        svg path{
+        fill:#F6A500;
+    }
+}
 `
 
 export const Phones = styled.div`
@@ -117,18 +126,25 @@ export const Phone = styled.div`
 export const CallAction = styled.div`
         position:relative;
         height:auto;
-        width:365px;
+        width:100%;
         display:flex;
         justify-content:flex-start;
         align-items:center;
-        padding:15px 25px;
         max-width:350px;
         margin:0 auto;
         border:${ props => props.border ? props.border : 'none'};
         user-select:none;
         transition:.3s;
+        padding:15px 25px;
+        a{
+            width:100%;
+            height:100%;
+        }
         &:hover{
-            background:rgba(0,0,0,0.5);
+            background:rgba(250,250,250,.5);
+            a,svg path{
+                color:#FFF;
+            }
         }
     a{
         height:100%;
@@ -152,4 +168,13 @@ export const Box = styled.div`
     height:${(props) => props.height};
     padding:${(props) => props.padding};
     margin:${(props) => props.margin};
+`
+
+export const Grid = styled.div`
+    display:grid;
+    grid-template-columns:1fr 557px 557px 1fr;
+    grid-auto-rows:auto;
+    width:100%;
+    height:100%;
+    position:relative;
 `

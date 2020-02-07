@@ -52,9 +52,9 @@ export default function home() {
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
                                 com o <span className="orange-color bolder">compromisso</span> de
-                                                                                construir empreendimentos
-                                                                                de médio e alto padrão
-                                                                                com excelência.
+                                                                                    construir empreendimentos
+                                                                                    de médio e alto padrão
+                                                                                    com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>
@@ -67,7 +67,7 @@ export default function home() {
                                     correspondam ao que cada um de seus compradores
                                     e investidores merece – do planejamento à entrega.
                             </p>
-                                <Button className="btn btn-icon" background="#F6A500" color="#FFF" width="200px" fontSize=".85em">
+                                <Button onClick={() => document.location.href = '/about'} className="btn btn-icon" background="#F6A500" color="#FFF" width="200px" fontSize=".85em">
                                     Saiba Mais
                                     <svg className="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="white" />

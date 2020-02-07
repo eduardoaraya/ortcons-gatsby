@@ -1,12 +1,10 @@
 import styled from 'styled-components';
+import { Link } from 'gatsby';
 
 export const SectionDevelopment = styled.section`
     width:100%;
     min-height:540px;
     background:#222;
-    div:first-child{
-        border-right:1px solid #E5E5E5;
-    }
 `
 
 export const Box = styled.div`

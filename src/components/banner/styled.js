@@ -119,7 +119,7 @@ export const BoxCenter = styled.div`
         }
     }
     .call-action{
-        height:65px;
+        height:45px;
         width:80%;
         display:flex;
         justify-content:flex-start;
@@ -130,7 +130,10 @@ export const BoxCenter = styled.div`
         border-radius:4px;
         cursor: pointer;
         &:hover{
-                background:rgba(0,0,0,0.5);
+            background:rgba(250,250,250,.5);
+            a,svg path{
+                color:#FFF;
+            }
         }
         .link{
             color:#FFF;

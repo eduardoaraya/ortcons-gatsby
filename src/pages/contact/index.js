@@ -11,6 +11,10 @@ const contact = () => {
         <Layout hidfenFooter={true}>
             <SectionContact backgroundImage={bg}>
                 <Container className="grid">
+                    <div className="phrase separator">
+                        <h2 className="txt-uppercase orange-color">Grandes empreendimentos para
+                        grandes realizações.</h2>
+                    </div>
                     <FlexList className="social" flow="row">
                         <li>
                             <a>
@@ -63,10 +67,6 @@ const contact = () => {
                             <p className="white-color">
                                 48 9987.65432
                                 </p>
-                        </div>
-                        <div className="separator">
-                            <h2 className="txt-uppercase orange-color">Grandes empreendimentos para
-                            grandes realizações.</h2>
                         </div>
                     </Column>
                     <h1 className="white-color contact-title">Contato</h1>

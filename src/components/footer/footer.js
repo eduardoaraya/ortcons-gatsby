@@ -90,7 +90,7 @@ export default function footer() {
                         </div>
                     </Column>
                     <Column>
-                        <Button className="btn-up" color="#000" background="#F6A500">
+                        <Button className="btn-up" onClick={() => window.scrollTo(0, 0)} color="#000" background="#F6A500">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M-3.49691e-07 8L1.41 9.41L7 3.83L7 16L9 16L9 3.83L14.59 9.41L16 8L8 -3.49691e-07L-3.49691e-07 8Z" fill="#121315" />
                             </svg>

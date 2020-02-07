@@ -13,8 +13,8 @@ const CustomInput = styled.input`
     padding:5px;
 `
 
-export default function Input({ value, placeholder }) {
+export default function Input({ value, placeholder, ...props }) {
     return (
-        <CustomInput value={value} placeholder={placeholder} ></CustomInput>
+        <CustomInput value={value} placeholder={placeholder} {...props} ></CustomInput>
     );
 }

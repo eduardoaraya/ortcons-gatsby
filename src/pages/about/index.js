@@ -5,6 +5,7 @@ import { SectionAbout, ImageBanner } from './styled';
 import { Flex, TitleAbout, Container, Box } from '../../shared/styled-shared'
 
 import banner from '../../assets/imgs/banner-about.jpg';
+import FormRequestWorking from '../../components/form-request-working/form-request-working';
 
 const about = () => {
     return (
@@ -21,6 +22,7 @@ const about = () => {
                     <ImageBanner backgroundImage={banner}></ImageBanner>
                 </Flex>
             </SectionAbout>
+            <FormRequestWorking></FormRequestWorking>
         </Layout>
     )
 }
