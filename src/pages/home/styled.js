@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'gatsby';
 
 export const SectionDevelopment = styled.section`
     width:100%;

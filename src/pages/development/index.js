@@ -3,28 +3,27 @@ import Layout from '../../components/layout';
 
 import { SectionDevelopment, Box, MaxImage, WrapperImage, MinImage, ListMin } from './styled';
 import { Grid, FlexList, Button } from '../../shared/styled-shared';
-
-
-// import "react-responsive-carousel/lib/styles/carousel.min.css";
-// import { Carousel } from 'react-responsive-carousel';
 import Data from './data';
 
 
 
 const Development = () => {
 
-    const [imageActive, setImageActive] = useState([]);
+    const [imageActive, setImageActive] = useState({ img: null });
     const [arrayImages, setArrayImages] = useState([]);
 
-    useEffect(async () => {
-        const imgs = await Data.imgs.map((item, index) => {
-            return {
-                id: index,
-                img: item
-            }
-        })
-        setImageActive(imgs[0])
-        setArrayImages(imgs)
+    useEffect(() => {
+        async function getImgs() {
+            const imgs = await Data.imgs.map((item, index) => {
+                return {
+                    id: index,
+                    img: item
+                }
+            })
+            setImageActive(imgs[0])
+            setArrayImages(imgs)
+        }
+        getImgs();
     }, []);
 
     const handleClickImage = (index) => {
@@ -36,7 +35,7 @@ const Development = () => {
             <SectionDevelopment>
                 <Grid>
                     <ListMin>
-                        {arrayImages.map((item, index) => <MinImage key={item.id} className={imageActive.id == item.id ? 'active' : ''} onClick={() => handleClickImage(item.id)} src={item.img}></MinImage>)}
+                        {arrayImages.map((item, index) => <MinImage key={item.id} className={imageActive.id === item.id ? 'active' : ''} onClick={() => handleClickImage(item.id)} src={item.img}></MinImage>)}
                     </ListMin>
                     <WrapperImage>
                         <MaxImage src={imageActive.img}></MaxImage>
