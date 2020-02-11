@@ -1,8 +1,7 @@
+const path = require("path")
+const siteMetadata = require("./src/config/metadata")
 
-const path = require('path');
-const siteMetadata = require('./src/config/metadata')
-
-console.log(siteMetadata);
+console.log(siteMetadata)
 
 module.exports = {
   siteMetadata,
@@ -12,14 +11,14 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `development`,
-        path: path.join(__dirname, `src`, `assets`, 'developments', '1'),
+        path: path.join(__dirname, `src`, `assets`, "developments", "1"),
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `banners`,
-        path: path.join(__dirname, `src`, `assets`, 'imgs'),
+        path: path.join(__dirname, `src`, `assets`, "imgs"),
       },
     },
     {
@@ -27,10 +26,10 @@ module.exports = {
       options: {
         fonts: [
           `Raleway`,
-          `source sans pro\:300,400,400,700` // you can also specify font weights and styles
+          `source sans pro\:300,400,400,700`, // you can also specify font weights and styles
         ],
-        display: 'swap'
-      }
+        display: "swap",
+      },
     },
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
