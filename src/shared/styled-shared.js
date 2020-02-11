@@ -94,8 +94,8 @@ export const Button = styled.button`
         align-items:center;
         svg{
             path{
-                stroke:#131416;
-                fill:#F6A500;
+                /* stroke:#131416;
+                fill:#F6A500; */
                 transition:.4s;
             }
         }
@@ -200,6 +200,9 @@ export const Box = styled.div`
 export const Grid = styled.div`
     display:grid;
     grid-template-columns:1fr 2fr 657px 1fr;
+    @media(max-width:1140px){
+        grid-template-columns:1fr;
+    }
     grid-auto-rows:auto;
     width:100%;
     height:100%;

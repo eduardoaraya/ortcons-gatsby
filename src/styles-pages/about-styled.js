@@ -6,11 +6,21 @@ export const SectionAbout = styled.section`
     background: #F9F9F9;
     /* background:rgba(19,18,21); */
     position:relative;
+    @media(max-width:1140px){
+        margin-top:80px;
+        .wrapper{
+            flex-wrap:wrap;
+        }
+    }
     .box-about{
         height:100%;
         width:50%;
         min-width:600px;
         padding:155px;
+        @media(max-width:1140px){
+            padding:75px;
+            width:100%;
+        }
         .description{
             line-height:45px;
         }
@@ -20,6 +30,7 @@ export const SectionAbout = styled.section`
 export const ImageBanner = styled.div`
     width:50%;
     min-height:600px;
+    min-width:600px;
     display:flex;
     flex:1;
     background:url(${(props) => props.backgroundImage});

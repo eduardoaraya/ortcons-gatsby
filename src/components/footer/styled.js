@@ -26,7 +26,17 @@ export const Grid = styled.div`
     grid-template-columns:1fr 1.5fr 1.5fr 200px;
     grid-template-rows:200px 250px 286px;
     padding-top:105px;
+    @media(max-width:1140px){
+        display:flex;
+        flex-direction:column;
+        padding:105px 35px 0 35px;
+    }
     .social{
+        @media(max-width:1140px){
+            display:flex;
+            flex-direction:row;
+            padding:20px;
+        }
         flex-direction:row-reverse;
         li{
             margin:0 5px;
@@ -44,6 +54,7 @@ export const Grid = styled.div`
         }
     }
     .separator{
+       
         padding:20px;
         h4,h2{
             font-size:.75em;
@@ -57,6 +68,10 @@ export const Grid = styled.div`
         }
     }
     .btn-up{
+        @media(max-width:1140px){
+            position: absolute;
+            margin:25px;
+        }
         padding:0px;
         width:50px;
         height:50px;
@@ -65,12 +80,18 @@ export const Grid = styled.div`
         right:0;
     }
     .all-rights-reserved{
+        @media(max-width:1140px){
+            position: relative;
+        }
         position:absolute;
         bottom:0;
     }
     .icon-right{
+        @media(max-width:1140px){
+            margin:25px;
+        }
         position:absolute;
-        bottom:35px;
+        bottom:15px;
         right:0;
     }
 `

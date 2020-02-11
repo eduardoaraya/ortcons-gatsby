@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const SectionContact = styled.section`
     width:100%;
-    height:100vh;
+    height:auto;
     padding-top:200px;
     /* background:#131416; */
     background:#4D4E50;
@@ -14,6 +14,9 @@ export const SectionContact = styled.section`
         display:grid;
         grid-template-columns:1fr 1fr 1fr 1fr;
         grid-template-rows:1fr 2fr 1fr 1fr;
+        @media(max-width:1140px){
+           padding:0 35px;
+        }
     }
     .contact-title{
         text-transform:uppercase;

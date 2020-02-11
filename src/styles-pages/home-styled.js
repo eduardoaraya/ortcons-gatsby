@@ -4,9 +4,14 @@ export const SectionDevelopment = styled.section`
     width:100%;
     min-height:540px;
     background:#222;
+    @media(max-width:1140px){
+        height:auto;
+        min-height:340px;
+    }
 `
 
 export const Box = styled.div`
+  
     position:relative;
     display:block;
     width:100%;
@@ -24,6 +29,10 @@ export const Box = styled.div`
         background:rgba(0,0,0,.54);
         transition:.4s;
     }
+    @media(max-width:1140px){
+        height:auto;
+        min-height:340px;
+    }
 `
 
 export const SectionAbout = styled.section`
@@ -31,11 +40,25 @@ export const SectionAbout = styled.section`
     min-height:683px;
     background:#E5E5E5;
     padding:105px 0;
+    .wrapper{
+        @media(max-width:1140px){
+            flex-wrap:wrap;
+            padding:75px;
+        }
+    }
 `
 
 
 export const WrapperAboutText = styled.div`
     padding:45px 10px;
+    @media(max-width:1140px){
+        flex-wrap:wrap;
+        padding:75px;
+        height:auto;
+        h1{
+            font-size:1.5em;
+        }
+    }
     .about-left{
         font-size:2em;
         line-height: 45px;
@@ -45,6 +68,9 @@ export const WrapperAboutText = styled.div`
     .about-right{
         font-size:.85em;
         letter-spacing: 0.03em;
+        @media(max-width:1140px){
+         font-size:1em;
+        }
     }
     &.right{
         padding-top:105px;

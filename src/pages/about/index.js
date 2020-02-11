@@ -11,7 +11,7 @@ const About = () => {
     return (
         <Layout transparentHeader={false}>
             <SectionAbout>
-                <Flex>
+                <Flex className="wrapper">
                     <Box className="box-about">
                         <TitleAbout className="black-color" size="2.5em">Sobre nós</TitleAbout>
                         <p className="description">

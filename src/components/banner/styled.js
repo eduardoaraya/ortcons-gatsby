@@ -154,6 +154,9 @@ export const BoxBottom = styled.div`
     align-items:center;
     margin-top:205px;
     height:60px;
+    @media(max-width:1140px){
+        margin-right:45px;
+    }
     .chat-btn{
         background-color:rgba(250,250,250,.25);
         padding:15px;
@@ -166,6 +169,7 @@ export const BoxBottom = styled.div`
         height:50px;
         box-shadow:0px 10px 5px -5px rgba(0,0,0,.35);
         transition:.3s;
+       
         &:hover{
             box-shadow:0px 1px 5px -5px rgba(0,0,0,.35);
         }

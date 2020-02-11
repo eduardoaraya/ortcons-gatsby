@@ -17,6 +17,12 @@ const Form = styled.form`
     h3,label,input{
         color:#FFF;
     }
+    @media(max-width:1140px){
+        grid-column:1/5;
+        justify-content:center;
+        padding:75px 0;
+        min-height:auto;
+    }
     .header-form{
         h3{
             color:#F6A500;
@@ -46,15 +52,15 @@ export default function FormHaveInterest() {
                     <h3>Tenho Interesse</h3>
                 </div>
                 <div className="group">
-                    <label for="name">Nome completo:</label>
+                    <label htmlFor="name">Nome completo:</label>
                     <Input id="name" name="name" type="text"></Input>
                 </div>
                 <div className="group">
-                    <label for="tel">Telefone:</label>
+                    <label htmlFor="tel">Telefone:</label>
                     <Input id="tel" name="tel" type="text"></Input>
                 </div>
                 <div className="group">
-                    <label for="email">E-mail:</label>
+                    <label htmlFor="email">E-mail:</label>
                     <Input id="email" name="email" type="text"></Input>
                 </div>
                 <Button> Enviar </Button>

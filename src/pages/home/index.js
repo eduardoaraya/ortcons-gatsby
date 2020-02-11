@@ -28,7 +28,7 @@ export default function home() {
         <Layout transparentHeader={true}>
             <Banner></Banner>
             <SectionDevelopment>
-                <Flex>
+                <Flex >
                     <Box className="filter-black" backgroundImage={Rectangle1}>
                         <FlexCenter>
                             <CallAction border="solid 2px #FFF">
@@ -44,17 +44,17 @@ export default function home() {
             </SectionDevelopment>
             <SectionAbout>
                 <Container>
-                    <Flex>
+                    <Flex className="wrapper">
                         <Box>
                             <WrapperAboutText>
                                 <TitleAbout>Sobre nós</TitleAbout>
                                 <p className="about-left">
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
-                                com o <span className="orange-color bolder">compromisso</span> de
-                                                                                                    construir empreendimentos
-                                                                                                    de médio e alto padrão
-                                                                                                    com excelência.
+                                    com o <span className="orange-color bolder">compromisso</span> de
+                                    construir empreendimentos
+                                    de médio e alto padrão
+                                    com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>

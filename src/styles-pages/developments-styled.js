@@ -10,6 +10,10 @@ export const BoxDevelopment = styled.div`
     align-items:center;
     margin:25px 0px;
     box-shadow:0px 10px 25px -5px rgba(0,0,0,0.15);
+    @media(max-width:1140px){
+        max-height:300px;
+        overflow:hidden;
+    }
 `
 
 export const SectionDevelopmtens = styled.section`
@@ -18,12 +22,17 @@ export const SectionDevelopmtens = styled.section`
     margin-top:130px;
     padding:75px 0px;
     position:relative;
+    @media(max-width:1140px){
+        margin-top:80px;
+        padding:75px 35px;
+    }
 `
 
 export const Image = styled.img`
     width:50%;
     margin:0;
     position:relative;
+  
 `
 
 export const Content = styled.div`
@@ -73,6 +82,9 @@ export const Info = styled.div`
         text-transform:uppercase;
         color:#131416;
         margin:10px 0;
+        @media(max-width:1140px){
+            font-size:.68em;
+        }
     }
     small{
         color:#F6A500;

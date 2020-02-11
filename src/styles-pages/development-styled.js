@@ -4,7 +4,11 @@ export const SectionDevelopment = styled.section`
     min-height:800px;
     margin-top:130px;
     background:#F9F9F9;
+    @media(max-width:1140px){
+        margin-top:80px;
+    }
     .bg{
+       
         grid-column:1/3;
         background:url(${ (props) => props.background});
         background-position:center;
@@ -19,6 +23,7 @@ export const Box = styled.div`
     width:100%;
     height:auto;
     z-index: 99;
+    
     &.content{
         grid-column:3/4;
         padding:80px 75px;
@@ -26,6 +31,9 @@ export const Box = styled.div`
             grid-column:2/4;
             margin:0;
             /* box-shadow:0px 0 25px -5px rgba(0,0,0,0.15); */
+            @media(max-width:1140px){
+                grid-column:1/5;
+            }
         }
         p{
             line-height:36px;
@@ -34,6 +42,9 @@ export const Box = styled.div`
     &.info{
         grid-column:4/5;
         /* background:#FFF; */
+        @media(max-width:1140px){
+            grid-column:1/5;
+        }
         &.slideOn{
             grid-column:4/5;
             margin:0;
@@ -44,7 +55,16 @@ export const Box = styled.div`
                 background:#FFF;
             }
         }
+        ul{
+            @media(max-width:1140px){
+              flex-direction:row;
+              padding-bottom:100px;
+            }
+        }
         .item{
+            @media(max-width:1140px){
+                grid-column:1/2;
+            }
             margin:10px;
             width:100px;
             height:100px;
@@ -73,6 +93,7 @@ export const Box = styled.div`
             }
         }
     }
+   
 `
 
 export const WrapperImage = styled.div`
@@ -92,48 +113,77 @@ export const WrapperImage = styled.div`
     &.slideOff{
         grid-column:2/3;
     }
+    @media(max-width:1140px){
+        grid-column:1/2;
+        min-height:300px;
+        &.slideOn,&.slideOff{
+            grid-column:1/4;
+        }
+    }
     .btn-zoom{
         position:absolute;
         bottom:0;
         right:0;
         margin:15px;
+        @media(max-width:1140px){
+            display:none;
+        }
     }
 `
 
 export const MaxImage = styled.img`
     margin:0;
+    width:${({ width }) => width || ''};
+    height:${({ height }) => height || ''};
+  
 `
 
 export const MinImage = styled.img`
-    flex:1;
     display:block;
     margin:10px auto;
     position:relative;
     cursor: pointer;
     opacity:.2;
     transition:.3s;
+    max-width:${({ width }) => width + 'px' || '80px'};
+    height:${({ height }) => height + 'px' || '80px'};
+    max-height:150px;
     &:hover,&.active{
         opacity:1;
+    }
+    @media(max-width:1140px){
+        margin:auto 10px;
+        max-height:170px;
+        padding-top:45px;
     }
 `
 
 export const ListMin = styled.div`
     display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
+    flex-direction:column;
     margin:0;
     height:auto;
     max-height:calc(100vh - 130px);
     width:100%;
     overflow:hidden;
     grid-column:1/2;
+    @media(max-width:1140px){
+        grid-column:1/5;
+        flex-direction:row;
+        overflow-x:scroll;
+        height:auto;
+        padding:0;
+    }
     overflow-y:scroll;
     background:#131416;
     padding:50px;
     padding-right:0;
     /* width */
     &::-webkit-scrollbar {
-     width: 10px;
+        width: 10px;
+        @media(max-width:900px){
+            display:none;
+        }
     }
 
     /* Track */

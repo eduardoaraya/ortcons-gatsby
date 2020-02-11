@@ -7,6 +7,9 @@ const InframeMap = styled.section`
     background:#DDD;
     grid-column:1/3;
     margin:0;
+    @media(max-width:1140px){
+        grid-column:1/5;
+    }
     iframe{
         border:none;
         width:100%;
