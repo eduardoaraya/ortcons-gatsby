@@ -35,6 +35,7 @@ export const Flex = styled.div`
 
 export const FlexList = styled.ul`
     display:flex;
+    margin:0;
     position:relative;
     height:100%;
     flex-direction:${props => props.flow};
@@ -79,6 +80,11 @@ export const Button = styled.button`
     display:flex;
     justify-content:center;
     align-items:center;
+    letter-spacing:1.5px;
+    &.min{
+        font-size:.65em;
+        padding:5px 12.5px;
+    }
     svg{
         margin:0;
     }
@@ -91,9 +97,9 @@ export const Button = styled.button`
         color:#F6A500;
         background-color:#131416;
         svg path{
-        fill:#F6A500;
+         fill:#F6A500;
+        }
     }
-}
 `
 
 export const Phones = styled.div`
@@ -187,4 +193,11 @@ export const Grid = styled.div`
     width:100%;
     height:100%;
     position:relative;
+`
+
+export const Title = styled.h1`
+    font-size:1.5em;
+    text-transform:uppercase;
+    font-weight:bolder;
+    color:#131416;
 `

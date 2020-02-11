@@ -52,9 +52,9 @@ export default function home() {
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
                                 com o <span className="orange-color bolder">compromisso</span> de
-                                                                                    construir empreendimentos
-                                                                                    de médio e alto padrão
-                                                                                    com excelência.
+                                                                                            construir empreendimentos
+                                                                                            de médio e alto padrão
+                                                                                            com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>

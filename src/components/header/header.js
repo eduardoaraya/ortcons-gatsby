@@ -41,7 +41,7 @@ const Header = ({ transparent }) => {
         <Navigator>
           <MenuList>
             <MenuItem><Link activeClassName="active" to="/home">Home</Link></MenuItem>
-            <MenuItem><Link activeClassName="active" to="/development">Empreendimento</Link></MenuItem>
+            <MenuItem><Link activeClassName="active" to="/developments">Empreendimentos</Link></MenuItem>
             <MenuItem><Link activeClassName="active" to="/about">A Ortcons</Link></MenuItem>
             <MenuItem><Link activeClassName="active" to="/contact">Contato</Link></MenuItem>
           </MenuList>
