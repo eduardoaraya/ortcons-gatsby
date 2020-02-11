@@ -7,7 +7,8 @@ import {
   Navigator,
   MenuList,
   MenuItem,
-  Container
+  Container,
+  Mobile
 } from './styled';
 
 import {
@@ -19,6 +20,7 @@ import {
 const Header = ({ transparent }) => {
 
   const [fixed, setFixed] = useState(false);
+  const [mobile, setMobile] = useState(false);
 
   function handleScrollHeader() {
     if (window.scrollY > 100) {
@@ -33,18 +35,22 @@ const Header = ({ transparent }) => {
     return () => window.removeEventListener('scroll', handleScrollHeader);
   }, [])
 
+  const toggleMenu = () => {
+    setMobile(!mobile);
+  }
+
   return (
     <HeaderTop transparent={transparent} className={fixed && 'active'}>
       <Container>
         <Logo src={logo} />
-        <Navigator>
+        <Navigator className={mobile ? 'open' : ''}>
           <MenuList>
             <MenuItem><Link activeClassName="active" to="/home">Home</Link></MenuItem>
             <MenuItem><Link activeClassName="active" to="/developments">Empreendimentos</Link></MenuItem>
             <MenuItem><Link activeClassName="active" to="/about">A Ortcons</Link></MenuItem>
             <MenuItem><Link activeClassName="active" to="/contact">Contato</Link></MenuItem>
           </MenuList>
-          <Phones>
+          <Phones className="phones">
             <Phone>
               <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M20.2627 17.3637L16.1755 13.2763C15.8095 12.9103 15.2298 12.9103 14.864 13.2763L13.7354 14.4049C13.6133 14.527 13.4302 14.527 13.3081 14.4355C11.8444 13.1545 10.4717 11.7819 9.19065 10.2873C9.09909 10.1654 9.09909 9.98228 9.22117 9.86021L10.3498 8.7316C10.5329 8.54849 10.6242 8.33525 10.6242 8.06058C10.6242 7.81643 10.5329 7.57248 10.3498 7.38936L6.26261 3.36324C5.89658 2.99721 5.31712 2.99721 4.95109 3.36324L1.90098 6.41374C1.62651 6.68822 1.53495 7.1458 1.74839 7.51183C5.04245 13.612 10.0141 18.5839 16.1143 21.8779C16.2364 21.939 16.389 22 16.5415 22C16.7855 22 17.0295 21.9084 17.2126 21.7255L20.2627 18.6754C20.4458 18.4923 20.5372 18.2789 20.5372 18.0042C20.5372 17.7602 20.4456 17.5466 20.2627 17.3637Z" stroke="white" strokeWidth="1.8" strokeMiterlimit="10" />
@@ -62,6 +68,13 @@ const Header = ({ transparent }) => {
           </Phones>
         </Navigator>
       </Container>
+      <Mobile onClick={() => toggleMenu()} className={mobile ? 'active' : ''}>
+        <svg xmlns="http://www.w3.org/2000/svg" width="48pt" height="48pt" viewBox="0 0 48 48" version="1.1">
+          <g id="surface10314045">
+            <path d="M 6 22 L 42 22 L 42 26 L 6 26 Z M 6 10 L 42 10 L 42 14 L 6 14 Z M 6 34 L 42 34 L 42 38 L 6 38 Z M 6 34 " />
+          </g>
+        </svg>
+      </Mobile>
     </HeaderTop >
   );
 }

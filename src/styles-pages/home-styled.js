@@ -8,6 +8,11 @@ export const SectionDevelopment = styled.section`
         height:auto;
         min-height:340px;
     }
+    .wrapper{
+        @media(max-width:900px){
+            flex-direction:column;
+        }
+    }
 `
 
 export const Box = styled.div`
@@ -33,6 +38,14 @@ export const Box = styled.div`
         height:auto;
         min-height:340px;
     }
+    @media(max-width:900px){
+        height:auto;
+        min-height:240px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+  
 `
 
 export const SectionAbout = styled.section`
@@ -40,10 +53,18 @@ export const SectionAbout = styled.section`
     min-height:683px;
     background:#E5E5E5;
     padding:105px 0;
+    @media(max-width:900px){
+        padding:15px 0;
+    }
     .wrapper{
         @media(max-width:1140px){
             flex-wrap:wrap;
-            padding:75px;
+            padding:15px 45px;
+        }
+        .right{
+            @media(max-width:900px){
+                padding:15px;
+            }
         }
     }
 `
@@ -52,8 +73,6 @@ export const SectionAbout = styled.section`
 export const WrapperAboutText = styled.div`
     padding:45px 10px;
     @media(max-width:1140px){
-        flex-wrap:wrap;
-        padding:75px;
         height:auto;
         h1{
             font-size:1.5em;

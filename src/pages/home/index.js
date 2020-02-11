@@ -28,7 +28,7 @@ export default function home() {
         <Layout transparentHeader={true}>
             <Banner></Banner>
             <SectionDevelopment>
-                <Flex >
+                <Flex className="wrapper">
                     <Box className="filter-black" backgroundImage={Rectangle1}>
                         <FlexCenter>
                             <CallAction border="solid 2px #FFF">

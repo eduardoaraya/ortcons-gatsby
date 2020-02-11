@@ -6,6 +6,9 @@ export const ContentBanner = styled.div`
     background-position:center;
     background-repeat:no-repeat;
     height:100vh;
+    @media(max-width:900px){
+        height:auto;
+    }
     background-color:#222;
     border-bottom:1px solid #E5E5E5;
 `
@@ -19,6 +22,9 @@ export const WrapperBoxCenter = styled.div`
     flex-direction:column;
     align-items:center;
     padding-top:285px;
+    @media(max-width:900px){
+        padding-top:155px;
+    }
 `
 
 
@@ -28,6 +34,11 @@ export const BoxCenter = styled.div`
     border:2px solid #FFF;
     padding:15px 45px;
     background:rgba(0,0,0,0.35);
+    @media(max-width:900px){
+        width: 100%;
+        height: 300px;
+        padding:15px;
+    }
     .intro{
         h1{
             color:#FFF;
@@ -77,6 +88,9 @@ export const BoxCenter = styled.div`
                     font-feature-settings: 'pnum' on, 'lnum' on;
                     text-transform: uppercase;
                     animation:fadeLeft 1s .5s forwards;
+                    @media(max-width:900px){
+                        font-size: 1.3em;
+                    }
                 }
                 &.txt-3{
                     opacity:0;
@@ -129,6 +143,9 @@ export const BoxCenter = styled.div`
         margin:15px auto;
         border-radius:4px;
         cursor: pointer;
+        @media(max-width:900){
+            flex-wrap:wrap;
+        }
         &:hover{
             background:rgba(250,250,250,.5);
             a,svg path{
@@ -154,10 +171,12 @@ export const BoxBottom = styled.div`
     align-items:center;
     margin-top:205px;
     height:60px;
-    @media(max-width:1140px){
-        margin-right:45px;
+    @media(max-width:900px){
+        margin:25px auto;
+        justify-content:center;
     }
     .chat-btn{
+      
         background-color:rgba(250,250,250,.25);
         padding:15px;
         display:flex;
@@ -178,4 +197,5 @@ export const BoxBottom = styled.div`
             height:35px;
         }
     }
+  
 `

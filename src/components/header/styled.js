@@ -4,19 +4,19 @@ export const HeaderTop = styled.header`
     width:100%;
     height:130px;
     position:fixed;
-    z-index:9999;
     transition:.3s;
     top:0;
     left:0;
     background:${ (props) => props.transparent ? 'transparent' : 'rgba(19,18,21)'};
+    z-index:9999999;
     &.active{
         background:rgba(19,18,21,.85);
         box-shadow:0px 5px 8px -5px rgba(19,18,21,.75);
     }
     @media(max-width:1140px){
         height:80px;
-        background:rgba(19,18,21,.95);
     }
+
 `
 
 export const Container = styled.div`
@@ -33,9 +33,11 @@ export const Container = styled.div`
 `
 
 export const Logo = styled.img`
+    position:relative;
     width:195.35px;
     height:56px;
     transition:.3s;
+    z-index:999;
     &.active{
         width:100px;
         height:26px;
@@ -62,15 +64,25 @@ export const Navigator = styled.nav`
         }
     }
     @media(max-width:1106px){
+        opacity:0;
+        left:-300px;
+        transition:.3s;
+        &.open{
+            opacity:1;
+            left:0;
+        }
+        display:flex;
         position:fixed;
         top:0;
-        left:0;
         width:100%;
+        max-width:300px;
         height:100%;
-        margin-top:80px;
-        background:rgba(19,18,21,.95);
-        display:flex;
-        padding-top:105px;
+        background:rgba(19,18,21,1);
+        padding-top:80px;
+        z-index:99;
+    }
+    .phones{
+        display:none;
     }
 `
 
@@ -139,6 +151,23 @@ export const MenuItem = styled.li`
             justify-content:flex-start;
             display:block;
             padding:20px 25px;
+        }
+    }
+`
+
+export const Mobile = styled.div`
+    position: absolute;
+    top:15px;
+    right:30px;
+    width: 40px;
+    height: 40px;
+    outline:none;
+    cursor: pointer;
+    svg{
+        width:50px;
+        height:50px;
+        path{
+            fill:#F6A500;
         }
     }
 `
