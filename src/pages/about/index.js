@@ -1,9 +1,11 @@
 import React from 'react';
 import Layout from '../../components/layout';
-import { SectionAbout, ImageBanner } from './styled';
+
+import { SectionAbout, ImageBanner } from '../../styles-pages/about-styled';
 import { Flex, TitleAbout, Box } from '../../shared/styled-shared'
+
 import banner from '../../assets/imgs/banner-about.jpg';
-import FormRequestWorking from '../../components/form-request-working/form-request-working';
+import FormRequestWorking from '../../components/form-request-working/FormRequestWorking';
 
 const About = () => {
     return (

@@ -1,16 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../../components/layout';
 
-import { SectionDevelopment, Box, MaxImage, WrapperImage, MinImage, ListMin } from './styled';
+import { SectionDevelopment, Box, MaxImage, WrapperImage, MinImage, ListMin, SectionMap } from '../../styles-pages/development-styled';
 import { Grid, FlexList, Button } from '../../shared/styled-shared';
-import Data from './data';
-
+import Map from '../../components/map/map'
+import Data from '../../config/data';
+import FormHaveInterest from '../../components/form-have-interest/FormHaveInterest'
 
 
 const Development = () => {
 
     const [imageActive, setImageActive] = useState({ img: null });
     const [arrayImages, setArrayImages] = useState([]);
+    const [slideMode, setSlideMode] = useState(false);
 
     useEffect(() => {
         async function getImgs() {
@@ -30,6 +32,10 @@ const Development = () => {
         return setImageActive(arrayImages[index]);
     }
 
+    const toggleSlide = () => {
+        setSlideMode(!slideMode)
+    }
+
     return (
         <Layout>
             <SectionDevelopment>
@@ -37,9 +43,9 @@ const Development = () => {
                     <ListMin>
                         {arrayImages.map((item, index) => <MinImage key={item.id} className={imageActive.id === item.id ? 'active' : ''} onClick={() => handleClickImage(item.id)} src={item.img}></MinImage>)}
                     </ListMin>
-                    <WrapperImage>
+                    <WrapperImage className={(slideMode ? 'slideOn' : 'slideOff')}>
                         <MaxImage src={imageActive.img}></MaxImage>
-                        <Button className="btn-zoom" color="#FFF" background="#131416" width="50px" height="50px">
+                        <Button className="btn-zoom btn-icon" onClick={() => toggleSlide()} background="#131416" width="70px" height="70px">
                             <svg width="20" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M19.4924 1L1.5 18.9924" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
                                 <path d="M14.4473 1.0072H19.4852V6.04508" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
@@ -50,11 +56,12 @@ const Development = () => {
                             </svg>
                         </Button>
                     </WrapperImage>
-                    <Box className="content">
+
+                    <Box className={slideMode ? 'content slideOn' : 'content slideOff'}>
                         <h1>RESERVA DO TABULEIRO</h1>
                         <p>Você de frente para o melhor da vida! O Reserva do Tabuleiro é um empreendimento moderno e refinado, pensado para você que busca conforto, bom gosto e bem-estar. Localizado de frente para a Serra do Tabuleiro em Palhoça/SC, é o encontro perfeito do estilo de vida urbano com a natureza, garantindo a qualidade de vida que você merece. São apartamentos deslumbrantes de até 74m² com 1 e 2 dormitórios, ampla sala de estar, cozinha americana, área de serviço, sacada e churrasqueira. Tudo isso a poucos metros de uma área de mais de 80 hectares de puro verde. Além disso, sua infraestrutura possui Salão de Festas, Skylounge e ainda conta com uma área comercial no andar térreo do prédio, onde lojas de diferentes tipos de produtos e serviços estarão ao alcance do elevador. Muito mais praticidade para a sua vida. Venha viver de frente para o melhor da vida. Venha para o Reserva do Tabuleiro.</p>
                     </Box>
-                    <Box className="info">
+                    <Box className={slideMode ? 'info slideOn' : 'info slideOff'}>
                         <FlexList flow="column" justifyContent="center">
                             <div className="item">
                                 <svg width="21" height="22" viewBox="0 0 21 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,6 +104,12 @@ const Development = () => {
                     </Box>
                 </Grid>
             </SectionDevelopment>
+            <SectionMap>
+                <Grid>
+                    <Map />
+                    <FormHaveInterest />
+                </Grid>
+            </SectionMap>
         </Layout >
     )
 }

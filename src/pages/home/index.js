@@ -8,7 +8,7 @@ import {
     Box,
     SectionAbout,
     WrapperAboutText
-} from './styled';
+} from '../../styles-pages/home-styled';
 
 import {
     Container,
@@ -32,7 +32,7 @@ export default function home() {
                     <Box className="filter-black" backgroundImage={Rectangle1}>
                         <FlexCenter>
                             <CallAction border="solid 2px #FFF">
-                                <Link>Nome do empreendimento</Link>
+                                <Link to="deveolpments">Nome do empreendimento</Link>
                                 <svg className="icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z" fill="white" />
                                 </svg>
@@ -52,9 +52,9 @@ export default function home() {
                                     A Ortcons Incorporadora
                                     é uma empresa que surge
                                 com o <span className="orange-color bolder">compromisso</span> de
-                                                                                            construir empreendimentos
-                                                                                            de médio e alto padrão
-                                                                                            com excelência.
+                                                                                                    construir empreendimentos
+                                                                                                    de médio e alto padrão
+                                                                                                    com excelência.
                             </p>
                             </WrapperAboutText>
                         </Box>

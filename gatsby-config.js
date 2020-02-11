@@ -7,6 +7,7 @@ console.log(siteMetadata);
 module.exports = {
   siteMetadata,
   plugins: [
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -19,7 +20,7 @@ module.exports = {
       options: {
         fonts: [
           `Raleway`,
-          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+          `source sans pro\:300,400,400,700` // you can also specify font weights and styles
         ],
         display: 'swap'
       }
@@ -52,7 +53,7 @@ module.exports = {
       resolve: `gatsby-plugin-nprogress`,
       options: {
         color: `#f6a500`,
-        showSpinner: false,
+        showSpinner: true,
       },
     },
   ],

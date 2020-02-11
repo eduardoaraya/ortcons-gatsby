@@ -5,12 +5,12 @@ import styled from 'styled-components';
 const CustomInput = styled.input`
     border:none;
     outline:none;
-    border-bottom:solid 1px #F6A500;
     color:#FFF;
-    background:transparent;
+    background:#222;
     height:55px;
     width:100%;
-    padding:5px;
+    padding:10px;
+    margin:5px 0px;
 `
 
 export default function Input({ value, placeholder, ...props }) {

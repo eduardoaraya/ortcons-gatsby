@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const SectionDevelopment = styled.section`
     min-height:800px;
     margin-top:130px;
+    background:#F9F9F9;
     .bg{
         grid-column:1/3;
         background:url(${ (props) => props.background});
@@ -18,10 +19,14 @@ export const Box = styled.div`
     width:100%;
     height:auto;
     z-index: 99;
-    background:#E5E5E5;
     &.content{
         grid-column:3/4;
         padding:80px 75px;
+        &.slideOn{
+            grid-column:2/4;
+            margin:0;
+            /* box-shadow:0px 0 25px -5px rgba(0,0,0,0.15); */
+        }
         p{
             line-height:36px;
         }
@@ -29,6 +34,16 @@ export const Box = styled.div`
     &.info{
         grid-column:4/5;
         /* background:#FFF; */
+        &.slideOn{
+            grid-column:4/5;
+            margin:0;
+            border-left:4px solid #F6A500;
+            /* background:#FFF; */
+            .item{
+                transform:translate3d(-60px,0,0);
+                background:#FFF;
+            }
+        }
         .item{
             margin:10px;
             width:100px;
@@ -71,10 +86,17 @@ export const WrapperImage = styled.div`
     box-shadow:inset 15px 0px 10px -15px rgba(0,0,0,0.85);
     padding:15px;
     position: relative;
+    &.slideOn{
+        grid-column:2/5;
+    }
+    &.slideOff{
+        grid-column:2/3;
+    }
     .btn-zoom{
         position:absolute;
-        bottom:25%;
-        right:15px;
+        bottom:0;
+        right:0;
+        margin:15px;
     }
 `
 
@@ -129,3 +151,8 @@ export const ListMin = styled.div`
     background: #F6A500;
     }
 `
+
+export const SectionMap = styled.section`
+    width:100%;
+    background: #F9F9F9;
+` 

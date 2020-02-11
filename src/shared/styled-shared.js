@@ -92,12 +92,23 @@ export const Button = styled.button`
         display:flex;
         justify-content:space-between;
         align-items:center;
+        svg{
+            path{
+                stroke:#131416;
+                fill:#F6A500;
+                transition:.4s;
+            }
+        }
     }
     &:hover{
         color:#F6A500;
         background-color:#131416;
-        svg path{
-         fill:#F6A500;
+        svg{
+            path{
+                stroke:#131416;
+                fill:#F6A500;
+                transition:.4s;
+            }
         }
     }
 `
@@ -193,6 +204,7 @@ export const Grid = styled.div`
     width:100%;
     height:100%;
     position:relative;
+    background:${(props) => props.background ? props.background : 'transparent'};
 `
 
 export const Title = styled.h1`
