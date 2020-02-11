@@ -8,21 +8,14 @@ import {
   MenuList,
   MenuItem,
   Container,
-  Mobile
-} from './styled';
-
-import {
-  Phones,
-  Phone
-} from '../../shared/styled-shared';
-
+  Mobile,
+} from "./styled"
 
 import { Phones, Phone } from "../../shared/styled-shared"
 
 const Header = ({ transparent }) => {
-
-  const [fixed, setFixed] = useState(false);
-  const [mobile, setMobile] = useState(false);
+  const [fixed, setFixed] = useState(false)
+  const [mobile, setMobile] = useState(false)
 
   function handleScrollHeader() {
     if (window.scrollY > 100) {
@@ -38,14 +31,14 @@ const Header = ({ transparent }) => {
   }, [])
 
   const toggleMenu = () => {
-    setMobile(!mobile);
+    setMobile(!mobile)
   }
 
   return (
     <HeaderTop transparent={transparent} className={fixed && "active"}>
       <Container>
         <Logo src={logo} />
-        <Navigator className={mobile ? 'open' : ''}>
+        <Navigator className={mobile ? "open" : ""}>
           <MenuList>
             <MenuItem>
               <Link activeClassName="active" to="/home">
@@ -120,15 +113,21 @@ const Header = ({ transparent }) => {
           </Phones>
         </Navigator>
       </Container>
-      <Mobile onClick={() => toggleMenu()} className={mobile ? 'active' : ''}>
-        <svg xmlns="http://www.w3.org/2000/svg" width="48pt" height="48pt" viewBox="0 0 48 48" version="1.1">
+      <Mobile onClick={() => toggleMenu()} className={mobile ? "active" : ""}>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="48pt"
+          height="48pt"
+          viewBox="0 0 48 48"
+          version="1.1"
+        >
           <g id="surface10314045">
             <path d="M 6 22 L 42 22 L 42 26 L 6 26 Z M 6 10 L 42 10 L 42 14 L 6 14 Z M 6 34 L 42 34 L 42 38 L 6 38 Z M 6 34 " />
           </g>
         </svg>
       </Mobile>
-    </HeaderTop >
-  );
+    </HeaderTop>
+  )
 }
 
 export const query = graphql`

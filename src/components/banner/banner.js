@@ -5,6 +5,7 @@ import { ContentBanner, BoxCenter, WrapperBoxCenter, BoxBottom } from "./styled"
 import { Container } from "../../shared/styled-shared"
 
 import banner from "../../assets/imgs/banner1.png"
+
 import icon1 from "../../assets/imgs/icon1.png"
 import icon2 from "../../assets/imgs/icon2.png"
 import icon3 from "../../assets/imgs/icon3.png"

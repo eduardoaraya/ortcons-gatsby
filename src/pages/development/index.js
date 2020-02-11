@@ -14,7 +14,6 @@ import { Grid, FlexList, Button } from "../../shared/styled-shared"
 import Map from "../../components/map/map"
 import FormHaveInterest from "../../components/form-have-interest/FormHaveInterest"
 import { graphql, useStaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 const Development = () => {
   const data = useStaticQuery(graphql`
