@@ -8,7 +8,6 @@ import {
   MenuList,
   MenuItem,
   Container,
-<<<<<<< HEAD
   Mobile
 } from './styled';
 
@@ -16,20 +15,14 @@ import {
   Phones,
   Phone
 } from '../../shared/styled-shared';
-=======
-} from "./styled"
->>>>>>> a2d09cf15443eb4f97cff2b622fb5d0952f78af5
+
 
 import { Phones, Phone } from "../../shared/styled-shared"
 
 const Header = ({ transparent }) => {
-<<<<<<< HEAD
 
   const [fixed, setFixed] = useState(false);
   const [mobile, setMobile] = useState(false);
-=======
-  const [fixed, setFixed] = useState(false)
->>>>>>> a2d09cf15443eb4f97cff2b622fb5d0952f78af5
 
   function handleScrollHeader() {
     if (window.scrollY > 100) {
