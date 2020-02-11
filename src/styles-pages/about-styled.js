@@ -21,6 +21,10 @@ export const SectionAbout = styled.section`
       padding: 75px;
       width: 100%;
     }
+    @media (max-width: 900px) {
+      min-width:100%;
+      padding:0;
+    }
     .description {
       line-height: 45px;
     }

@@ -127,7 +127,6 @@ const Header = ({ transparent }) => {
           </Phones>
         </Navigator>
       </Container>
-<<<<<<< HEAD
       <Mobile onClick={() => toggleMenu()} className={mobile ? 'active' : ''}>
         <svg xmlns="http://www.w3.org/2000/svg" width="48pt" height="48pt" viewBox="0 0 48 48" version="1.1">
           <g id="surface10314045">
@@ -137,10 +136,6 @@ const Header = ({ transparent }) => {
       </Mobile>
     </HeaderTop >
   );
-=======
-    </HeaderTop>
-  )
->>>>>>> a2d09cf15443eb4f97cff2b622fb5d0952f78af5
 }
 
 export const query = graphql`
