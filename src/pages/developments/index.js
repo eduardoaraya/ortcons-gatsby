@@ -36,6 +36,7 @@ const DevBox = () => {
 
   return (
     <BoxDevelopment>
+      <Image src={img}></Image>
       <Content>
         <FlexList flow="column" justifyContent="center">
           <div className="item">
@@ -220,7 +221,6 @@ const DevBox = () => {
           </Button>
         </Info>
       </Content>
-      <Image src={img}></Image>
     </BoxDevelopment>
   )
 }

@@ -170,6 +170,9 @@ export const MenuItem = styled.li`
 `
 
 export const Mobile = styled.div`
+@media(min-width:1105px){
+  display:none;
+}
   position: absolute;
   top: 15px;
   right: 30px;

@@ -14,6 +14,10 @@ export const BoxDevelopment = styled.div`
     max-height: 300px;
     overflow: hidden;
   }
+  @media (max-width: 900px) {
+    max-height: 100%;
+    flex-direction:column;
+  }
 `
 
 export const SectionDevelopmtens = styled.section`
@@ -32,6 +36,9 @@ export const Image = styled.img`
   width: 50%;
   margin: 0;
   position: relative;
+  @media (max-width: 900px) {
+    width: 100%;
+  }
 `
 
 export const Content = styled.div`

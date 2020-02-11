@@ -12,6 +12,10 @@ const Form = styled.form`
   grid-row: 2/3;
   padding: 15px;
   margin: 0;
+  @media (max-width: 900px) {
+      grid-column: 1/2;
+      grid-row:auto;
+  }
   button {
     float: right;
     margin: 20px 0px;
