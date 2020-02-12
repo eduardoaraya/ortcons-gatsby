@@ -29,7 +29,7 @@ export const SectionContact = styled.section`
     padding: 15px;
     @media (max-width: 900px) {
       grid-column: 1/2;
-      grid-row:auto;
+      grid-row: auto;
     }
   }
   .phrase {
@@ -37,7 +37,7 @@ export const SectionContact = styled.section`
     grid-column: 1/2;
     @media (max-width: 900px) {
       grid-column: 1/2;
-      grid-row:auto;
+      grid-row: auto;
     }
   }
   .person {
@@ -46,7 +46,7 @@ export const SectionContact = styled.section`
     /* border-right:solid 2px #F6A500; */
     @media (max-width: 900px) {
       grid-column: 1/2;
-      grid-row:auto;
+      grid-row: auto;
     }
   }
   .social {
@@ -55,8 +55,8 @@ export const SectionContact = styled.section`
     flex-direction: row-reverse;
     @media (max-width: 900px) {
       grid-column: 1/2;
-      grid-row:auto;
-      padding:24px;
+      grid-row: auto;
+      padding: 24px;
     }
     li {
       margin: 0 5px;
@@ -97,7 +97,7 @@ export const Footer = styled.footer`
     text-align: center;
     margin: 0px;
   }
-  @media(max-width:900px){
-    position:relative;
+  @media (max-width: 900px) {
+    position: relative;
   }
 `

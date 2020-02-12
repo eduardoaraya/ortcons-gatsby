@@ -38,7 +38,7 @@ export default function footer() {
             <Flex className="social">
               <FlexList flow="row">
                 <li>
-                  <a href="#">
+                  <a href="/#">
                     <svg
                       width="21"
                       height="20"
@@ -54,7 +54,7 @@ export default function footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/#">
                     <svg
                       width="21"
                       height="20"
@@ -70,7 +70,7 @@ export default function footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/#">
                     <svg
                       width="21"
                       height="20"
@@ -86,7 +86,7 @@ export default function footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="/#">
                     <svg
                       width="21"
                       height="20"

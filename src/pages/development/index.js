@@ -53,7 +53,7 @@ const Development = () => {
       setArrayImages(imgs)
     }
     getImgs()
-  }, [])
+  })
 
   const handleClickImage = id => {
     return setImageActive(arrayImages.find(item => item.id === id))

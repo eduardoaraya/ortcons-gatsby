@@ -27,7 +27,7 @@ export const Box = styled.div`
     grid-column: 3/4;
     padding: 80px 75px;
     @media (max-width: 900px) {
-      padding:45px;
+      padding: 45px;
     }
     &.slideOn {
       grid-column: 2/4;

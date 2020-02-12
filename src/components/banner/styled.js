@@ -140,10 +140,10 @@ export const BoxCenter = styled.div`
     margin: 15px auto;
     border-radius: 4px;
     cursor: pointer;
-    a{
-      color:#fff;
-      text-decoration:none;
-      margin-right:35px;
+    a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 35px;
     }
     @media (max-width: 900) {
       flex-wrap: wrap;

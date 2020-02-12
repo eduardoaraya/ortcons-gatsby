@@ -13,8 +13,8 @@ const Form = styled.form`
   padding: 15px;
   margin: 0;
   @media (max-width: 900px) {
-      grid-column: 1/2;
-      grid-row:auto;
+    grid-column: 1/2;
+    grid-row: auto;
   }
   button {
     float: right;
