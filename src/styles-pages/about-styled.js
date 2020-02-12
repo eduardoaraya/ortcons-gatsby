@@ -10,7 +10,7 @@ export const SectionAbout = styled.section`
     margin-top: 80px;
     .wrapper {
       flex-wrap: wrap;
-      flex-direction:column-reverse;
+      flex-direction: column-reverse;
     }
   }
   .box-about {
@@ -44,8 +44,8 @@ export const ImageBanner = styled.div`
   background-size: cover;
   @media (max-width: 900px) {
     min-width: 100%;
-    width:100%;
-    min-height:350px;
+    width: 100%;
+    min-height: 350px;
     background-position: right;
   }
 `

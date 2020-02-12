@@ -16,7 +16,7 @@ export const BoxDevelopment = styled.div`
   }
   @media (max-width: 900px) {
     max-height: 100%;
-    flex-direction:column;
+    flex-direction: column;
   }
 `
 

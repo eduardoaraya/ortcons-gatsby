@@ -25,15 +25,15 @@ export default function Banner() {
             </div>
             <div className="info">
               <div className="item">
-                <img src={icon3} />
+                <img src={icon3} alt="" />
                 <p>1 Vaga</p>
               </div>
               <div className="item">
-                <img src={icon2} />
+                <img src={icon2} alt="" />
                 <p>2 Dorm</p>
               </div>
               <div className="item">
-                <img src={icon1} />
+                <img src={icon1} alt="" />
                 <p>74 m²</p>
               </div>
             </div>

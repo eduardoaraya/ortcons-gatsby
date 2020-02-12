@@ -68,12 +68,12 @@ export const SectionAbout = styled.section`
 `
 
 export const WrapperAboutText = styled.div`
-    padding:45px 10px;
-    @media(max-width:1140px){
-        height:auto;
-        h1{
-            font-size:1.5em;
-        }
+  padding: 45px 10px;
+  @media (max-width: 1140px) {
+    height: auto;
+    h1 {
+      font-size: 1.5em;
+    }
   }
   .about-left {
     font-size: 2em;
