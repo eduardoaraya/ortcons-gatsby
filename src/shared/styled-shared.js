@@ -117,9 +117,14 @@ export const Phones = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  @media(max-width:1105px){
+    display:none;
+  }
 `
 
 export const Phone = styled.div`
+  user-select:none;
+  outline:none;
   position: relative;
   z-index: 999;
   padding: 10px 20px;
@@ -129,7 +134,8 @@ export const Phone = styled.div`
   display: flex;
   align-items: center;
   border-radius: 5px;
-  max-width: 170px;
+  max-width: 200px;
+  width:100%;
   &.active {
     transition: 0.3s;
     background: rgba(250, 250, 250, 0.32);
@@ -144,6 +150,7 @@ export const Phone = styled.div`
   span {
     color: #fff;
     margin-left: 15px;
+    width:100px;
     font-weight: bold;
     text-transform: uppercase;
   }

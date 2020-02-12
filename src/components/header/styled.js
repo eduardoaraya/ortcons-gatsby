@@ -82,19 +82,17 @@ export const Navigator = styled.nav`
     z-index: 99;
   }
   .phones {
-    display: none;
-    width: 195.35px;
-    height: 56px;
     transition: 0.3s;
     &.active {
       width: 100px;
       height: 26px;
     }
     @media (max-width: 1140px) {
-      width: 150px;
-      height: 45px;
       margin-left: 45px;
       margin-top: 20px;
+    }
+    @media(max-width:900px){
+      display: none;
     }
   }
 `
@@ -170,9 +168,9 @@ export const MenuItem = styled.li`
 `
 
 export const Mobile = styled.div`
-@media(min-width:1105px){
-  display:none;
-}
+  @media(min-width:1105px){
+    display:none;
+  }
   position: absolute;
   top: 15px;
   right: 30px;

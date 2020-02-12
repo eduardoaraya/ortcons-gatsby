@@ -1,8 +1,6 @@
 const path = require("path")
 const siteMetadata = require("./src/config/metadata")
 
-console.log(siteMetadata)
-
 module.exports = {
   siteMetadata,
   plugins: [
