@@ -1,16 +1,25 @@
 import styled from "styled-components"
 
 export const ContentBanner = styled.div`
-  background-image: url(${props => props.image});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
+  overflow:hidden;
+  background-color:#222;
   @media (max-width: 900px) {
     height: auto;
   }
-  background-color: #222;
   border-bottom: 1px solid #e5e5e5;
+  position:relative;
+  &:before{
+    content:'';
+    display:block;
+    width:100%;
+    height:100%;
+    background-color:rgba(0,0,0,.75);
+    z-index:1;
+    position:absolute;
+    top:0;
+    left:0;
+  }
 `
 
 export const WrapperBoxCenter = styled.div`
@@ -22,6 +31,7 @@ export const WrapperBoxCenter = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 285px;
+  z-index:9;
   @media (max-width: 900px) {
     padding-top: 155px;
   }
@@ -31,6 +41,9 @@ export const BoxCenter = styled.div`
   width: 575px;
   height: 350px;
   border: 2px solid #fff;
+  @media(max-width:900px){
+    border:none;
+  }
   padding: 15px 45px;
   background: rgba(0, 0, 0, 0.35);
   @media (max-width: 900px) {
@@ -131,9 +144,9 @@ export const BoxCenter = styled.div`
   }
   .call-action {
     height: 45px;
-    width: 80%;
+    width: 100%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     align-items: center;
     padding: 0 25px;
     transition: 0.3s;
@@ -143,7 +156,6 @@ export const BoxCenter = styled.div`
     a {
       color: #fff;
       text-decoration: none;
-      margin-right: 35px;
     }
     @media (max-width: 900) {
       flex-wrap: wrap;
@@ -180,7 +192,8 @@ export const BoxBottom = styled.div`
   height: 60px;
   @media (max-width: 900px) {
     margin: 25px auto;
-    justify-content: center;
+    justify-content: flex-end;
+    padding:0 20px;
   }
   .chat-btn {
     background-color: rgba(250, 250, 250, 0.25);
@@ -201,6 +214,58 @@ export const BoxBottom = styled.div`
     svg {
       width: 35px;
       height: 35px;
+    }
+  }
+`
+
+
+export const Dots = styled.div`
+  z-index:9;
+  position:relative;
+  bottom:35px;
+  left:0;
+  margin:10px;
+  max-width:100px;
+  ul{
+    align-items:center;
+    justify-content:center;
+    li{
+      margin:0;
+      flex:1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:.3s;
+      cursor: pointer;
+      &:hover,&.active{
+        transform:scale(1.5)
+      }
+    }
+  }
+`
+
+export const BannerImage = styled.img`
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  animation:fade .5s forwards;
+  display:none;
+  /* @media(max-width:1250px){
+    height:auto;
+  } */
+  &.active{
+    display:block;
+  }
+  @keyframes fade {
+    from{
+      opacity:0;
+      transform:translate3d(20px,0,0);
+    }
+    to{
+      opacity:1;
+      transform:translate3d(0,0,0);
     }
   }
 `

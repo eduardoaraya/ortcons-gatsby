@@ -18,14 +18,18 @@ import { graphql, useStaticQuery } from "gatsby"
 const Development = () => {
   const data = useStaticQuery(graphql`
     query Image {
-      images: allFile {
+      images:allFile(filter:{
+        relativeDirectory:{
+          eq:"developments/1"
+        }
+      }){
         nodes {
-          childImageSharp {
-            fixed(width: 300, height: 300) {
-              ...GatsbyImageSharpFixed
+          childImageSharp{
+            original {
+              src
             }
-            fluid {
-              ...GatsbyImageSharpFluid_withWebp
+            fixed(width:600,height:600){
+              ...GatsbyImageSharpFixed
             }
           }
         }
@@ -43,7 +47,7 @@ const Development = () => {
         if (item.childImageSharp) {
           interator.push({
             id: index,
-            img: item.childImageSharp.fluid,
+            img: item.childImageSharp.original,
             min: item.childImageSharp.fixed,
           })
         }
@@ -53,7 +57,7 @@ const Development = () => {
       setArrayImages(imgs)
     }
     getImgs()
-  })
+  },[])
 
   const handleClickImage = id => {
     return setImageActive(arrayImages.find(item => item.id === id))
