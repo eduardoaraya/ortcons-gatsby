@@ -62,7 +62,7 @@ const Header = ({ transparent }) => {
             </MenuItem>
           </MenuList>
           <Phones className="phones">
-            <Phone>
+            <Phone onClick={() => document.location.href = 'tel:  48. 3017.0700'}>
               <svg
                 width="23"
                 height="23"
@@ -95,7 +95,7 @@ const Header = ({ transparent }) => {
               </svg>
               <span> 48. 3017.0700</span>
             </Phone>
-            <Phone className="active">
+            <Phone className="active" onClick={() => document.location.href = 'https://api.whatsapp.com/send?phone=5548998765432'}>
               <svg
                 width="21"
                 height="21"

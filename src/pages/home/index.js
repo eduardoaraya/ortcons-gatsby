@@ -18,12 +18,12 @@ import {
   FlexCenter,
   TitleAbout,
 } from "../../shared/styled-shared"
-
 import Rectangle1 from "../../assets/imgs/Rectangle1.png"
 import Rectangle2 from "../../assets/imgs/Rectangle2.png"
 import Layout from "../../components/layout"
-
+import { navigate } from "@reach/router"
 export default function Home() {
+  // const navigation  = useNavigation();
   return (
     <Layout transparentHeader={true}>
       <Banner></Banner>
@@ -32,7 +32,7 @@ export default function Home() {
           <Box className="filter-black" backgroundImage={Rectangle1}>
             <FlexCenter>
               <CallAction border="solid 2px #FFF">
-                <Link to="deveolpments">Nome do empreendimento</Link>
+                <Link to="developments">Nome do empreendimento</Link>
                 <svg
                   className="icon"
                   width="16"
@@ -76,12 +76,12 @@ export default function Home() {
                   merece – do planejamento à entrega.
                 </p>
                 <Button
-                  onClick={() => (document.location.href = "/about")}
+                  onClick={() => navigate('/about')}
                   className="btn btn-icon"
                   background="#F6A500"
                   color="#FFF"
                   width="200px"
-                  fontSize=".85em"
+                  fontSize=".85em"  
                 >
                   Saiba Mais
                   <svg
