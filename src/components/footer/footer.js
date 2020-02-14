@@ -120,7 +120,7 @@ export default function footer() {
               <p className="white-color">48 9987.65432</p>
             </div>
             <div className="separator">
-              <Phone className="active">
+              <Phone className="active" onClick={() => document.location.href = 'https://api.whatsapp.com/send?phone=5548998765432'}>
                 <svg
                   width="21"
                   height="21"

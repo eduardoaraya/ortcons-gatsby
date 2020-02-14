@@ -9,6 +9,7 @@ import {
   Info,
 } from "../../styles-pages/developments-styled"
 import { Container, Title, FlexList, Button } from "../../shared/styled-shared"
+import { navigate } from "@reach/router"
 
 import img from "../../assets/developments/1/Fachada_Noturna.jpg"
 
@@ -31,7 +32,7 @@ const Developments = () => {
 
 const DevBox = () => {
   function navigateToDevelopment(id) {
-    return (document.location.href = `/development`)
+     navigate('/development')
   }
 
   return (

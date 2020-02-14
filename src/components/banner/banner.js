@@ -136,7 +136,7 @@ export default function Banner() {
           </BoxCenter>
           <BoxBottom>
             <div></div>
-            <div className="chat-btn">
+            <div className="chat-btn" onClick={() => document.location.href = 'mailto:CONTATO@ORTCONSINCORPORADORA.COM.BR'}>
               <svg
                 width="20"
                 height="20"
