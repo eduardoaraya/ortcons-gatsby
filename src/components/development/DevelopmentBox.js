@@ -1,3 +1,4 @@
+import React from 'react';
 import { navigate } from "@reach/router"
 import img from "../../assets/developments/1/Fachada_Noturna.jpg"
 import {
@@ -6,10 +7,11 @@ import {
   Content,
   Info,
 } from "../../styles-pages/developments-styled"
+import { Grid, FlexList, Button } from "../../shared/styled-shared"
 
 export default () => {
   function navigateToDevelopment(id) {
-    navigate('/development')
+    navigate('/development-info')
   }
 
   return (

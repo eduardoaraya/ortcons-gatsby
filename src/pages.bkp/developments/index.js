@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout"
 import { SectionDevelopmtens } from "../../styles-pages/developments-styled"
-import { Container, Title, FlexList, Button } from "../../shared/styled-shared"
+import { Container, Title, FlexList } from "../../shared/styled-shared"
 import DevelopmentBox from '../../components/development/DevelopmentBox';
 
 const Developments = () => {

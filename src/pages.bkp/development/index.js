@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react"
 import Layout from "../../components/layout"
-
 import {
   SectionDevelopment,
   Box,
@@ -57,7 +56,7 @@ const Development = () => {
       setArrayImages(imgs)
     }
     getImgs()
-  },[])
+  }, [])
 
   const handleClickImage = id => {
     return setImageActive(arrayImages.find(item => item.id === id))
