@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../../components/layout"
-import { SectionContact, Footer } from "../../styles-pages/contact-styled"
-import { Container, Column, FlexList } from "../../shared/styled-shared"
+import { SectionContact, Footer } from "./styled"
+import { Container, Column, FlexList } from "../../theme/styled"
 import FormContact from "../../components/form-contact/FormContact"
 import bg from "../../assets/imgs/footer.png"
 

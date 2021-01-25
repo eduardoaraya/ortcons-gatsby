@@ -7,11 +7,11 @@ import {
   Content,
   Info,
 } from "../../styles-pages/developments-styled"
-import { Grid, FlexList, Button } from "../../shared/styled-shared"
+import { FlexList, Button } from "../../shared/styled-shared"
 
 export default () => {
   function navigateToDevelopment(id) {
-    navigate('/development-info')
+    navigate('/constructions/apartments')
   }
 
   return (

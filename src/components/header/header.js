@@ -46,7 +46,7 @@ const Header = ({ transparent }) => {
               </Link>
             </MenuItem>
             <MenuItem>
-              <Link activeClassName="active" to="/developments">
+              <Link activeClassName="active" to="/constructions">
                 Empreendimentos
               </Link>
             </MenuItem>

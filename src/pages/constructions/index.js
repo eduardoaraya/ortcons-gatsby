@@ -1,10 +1,10 @@
 import React from "react"
 import Layout from "../../components/layout"
-import { SectionDevelopmtens } from "../../styles-pages/developments-styled"
-import { Container, Title, FlexList } from "../../shared/styled-shared"
+import { SectionDevelopmtens } from "./styeld"
+import { Container, Title, FlexList } from "../../theme/styled"
 import DevelopmentBox from '../../components/development/DevelopmentBox';
 
-const Developments = () => {
+const Constructions = () => {
   return (
     <Layout>
       <SectionDevelopmtens>
@@ -19,4 +19,4 @@ const Developments = () => {
     </Layout>
   )
 }
-export default Developments
+export default Constructions
