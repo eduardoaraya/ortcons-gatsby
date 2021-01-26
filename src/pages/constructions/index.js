@@ -2,7 +2,7 @@ import React from "react"
 import Layout from "../../components/layout"
 import { SectionDevelopmtens } from "./styeld"
 import { Container, Title, FlexList } from "../../theme/styled"
-import DevelopmentBox from '../../components/development/DevelopmentBox';
+import DevelopmentBox from "../../components/development/DevelopmentBox";
 
 const Constructions = () => {
   return (

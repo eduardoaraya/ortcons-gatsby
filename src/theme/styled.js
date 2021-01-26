@@ -38,6 +38,7 @@ export const FlexList = styled.ul`
   position: relative;
   height: 100%;
   flex-direction: ${props => props.flow};
+  flex-wrap: ${props => props.wrap ? 'wrap' : 'no-wrap'};
   padding: 0;
   list-style: none;
   justify-content: ${props =>
