@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const BoxDevelopment = styled.div`
+export const DevelopmentBox = styled.div`
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -17,6 +17,18 @@ export const BoxDevelopment = styled.div`
   @media (max-width: 900px) {
     max-height: 100%;
     flex-direction: column;
+  }
+  &.hide-info {
+    .default-img {
+      transform: translate3d(-100px, 0, 0);
+      box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .apartment-list {
+    height: 300px;
+  }
+  .content-construction {
+    transition: .3s;
   }
 `
 
@@ -36,6 +48,7 @@ export const Image = styled.img`
   width: 50%;
   margin: 0;
   position: relative;
+  transition: .3s;
   @media (max-width: 900px) {
     width: 100%;
   }
@@ -101,4 +114,8 @@ export const Info = styled.div`
   p {
     font-size: 0.851em;
   }
+`
+
+export const Apartment = styled.li`
+
 `

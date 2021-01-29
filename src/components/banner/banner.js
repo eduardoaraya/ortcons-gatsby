@@ -10,14 +10,10 @@ import icon3 from "../../assets/imgs/icon3.png"
 import { graphql, useStaticQuery } from "gatsby"
 
 
-
-
 export default function Banner() {
 
   const [image, setImage] = useState('');
   const [listImages, setListImages] = useState([]);
-
-
   const data = useStaticQuery(graphql`
       query Banners {
         images:allFile(filter:{
@@ -37,7 +33,8 @@ export default function Banner() {
           }
         }
       }
-    `)
+  
+      `)
 
   const dataImages = () => {
     const images = data.images.nodes.reduce((reduce, item, index) => {

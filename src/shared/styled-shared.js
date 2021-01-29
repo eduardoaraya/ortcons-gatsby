@@ -32,7 +32,7 @@ export const Flex = styled.div`
   height: 100%;
 `
 
-export const FlexList = styled.ul`
+export const FlexList = styled.div`
   display: flex;
   margin: 0;
   position: relative;

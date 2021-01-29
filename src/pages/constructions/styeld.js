@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const BoxDevelopment = styled.div`
+export const DevelopmentBox = styled.div`
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -18,7 +18,22 @@ export const BoxDevelopment = styled.div`
     max-height: 100%;
     flex-direction: column;
   }
+  &.hide-info {
+    .default-img {
+      transform: translate3d(-100px, 0, 0);
+      box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.15);
+    }
+  }
+  .apartment-list {
+    width: 100%;
+    transition: .3s;
+  }
+  .content-construction {
+    transition: .3s;
+  }
 `
+
+
 
 export const SectionDevelopmtens = styled.section`
   min-height: 600px;
@@ -100,5 +115,38 @@ export const Info = styled.div`
   }
   p {
     font-size: 0.851em;
+  }
+`
+export const Apartment = styled.div`
+  padding: 20px;
+  text-transform: uppercase;
+  width: 100%;
+  position: relative;
+  transform: translate3d(-100px, 0, 0);
+  margin: 10px 0px;
+  font-weight: bolder;
+  color: #666;
+  border-bottom: solid 1px #DDD;
+  cursor: pointer;
+  transition: .3s;
+  &:hover {
+    background-color: rgba(250, 250, 250, 0.13);
+    color: #222;
+    &::before {
+      background-color: #FFF;
+    }
+  }
+  &::before {
+    transition: .3s;
+    content: '';
+    padding: 20px;
+    z-index: 99;
+    position: absolute;
+    left: -50px;
+    top: 15px;
+    background-color: rgba(0, 0, 0, 0.73);
+    border-radius: 50%;
+    border: solid 1px #DDD;
+    opacity:0.5;
   }
 `

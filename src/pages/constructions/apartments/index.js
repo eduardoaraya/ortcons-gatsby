@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../../../components/layout"
+import DevelopmentBox from "../../../components/development/DevelopmentBox"
 import {
   Title,
   FlexList,
@@ -11,7 +12,6 @@ import {
   Wrapper,
   Grid
 } from "./styled";
-import img from "../../../assets/developments/1/Fachada_Noturna.jpg"
 
 const Apartments = () => {
   return (
@@ -19,21 +19,11 @@ const Apartments = () => {
       <ApartmentsSecion>
         <Container>
           <Grid>
-            <Wrapper className="construction-cover" background={`url('${img}')`}>
+            <Wrapper className="construction-cover" >
               <Title>Reserva do Tabuleiro</Title>
             </Wrapper>
             <Wrapper className="apartment-list">
               <FlexList flow="row" justifyContent="flex-start" wrap={true}>
-                <ApartmentBox>
-                </ApartmentBox>
-                <ApartmentBox>
-                </ApartmentBox>
-                <ApartmentBox>
-                </ApartmentBox>
-                <ApartmentBox>
-                </ApartmentBox>
-                <ApartmentBox>
-                </ApartmentBox>
               </FlexList>
             </Wrapper>
           </Grid>
