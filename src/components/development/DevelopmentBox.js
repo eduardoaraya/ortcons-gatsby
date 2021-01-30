@@ -1,44 +1,38 @@
-import React from "react"
-import Layout from "../../components/layout"
-
+import React, { useState } from 'react';
+import { navigate } from "gatsby"
 import {
-  SectionDevelopmtens,
-  BoxDevelopment,
+  DevelopmentBox,
   Image,
   Content,
   Info,
-} from "../../styles-pages/developments-styled"
-import { Container, Title, FlexList, Button } from "../../shared/styled-shared"
-import { navigate } from "@reach/router"
+  Apartment
+} from "../../pages/constructions/styeld"
+import { FlexList, Button } from "../../shared/styled-shared"
 
-import img from "../../assets/developments/1/Fachada_Noturna.jpg"
+export default ({
+  title,
+  subtitle,
+  description,
+  image,
+  apartments
+}) => {
+  const [toggleDetails, setToggleDetails] = useState(false);
 
-const Developments = () => {
-  return (
-    <Layout>
-      <SectionDevelopmtens>
-        <Container>
-          <Title>Empreendimentos</Title>
-          <FlexList flow="column">
-            <DevBox></DevBox>
-            <DevBox></DevBox>
-            <DevBox></DevBox>
-          </FlexList>
-        </Container>
-      </SectionDevelopmtens>
-    </Layout>
-  )
-}
+  function showApartments(toggle = undefined) {
+    if (toggle !== undefined) {
+      return setToggleDetails(toggle);
+    }
+    return setToggleDetails(!toggleDetails);
+  }
 
-const DevBox = () => {
-  function navigateToDevelopment(id) {
-     navigate('/development')
+  function toApartment(apartmentId) {
+    navigate('/constructions/apartment');
   }
 
   return (
-    <BoxDevelopment>
-      <Image src={img}></Image>
-      <Content>
+    <DevelopmentBox className={toggleDetails ? 'hide-info' : ''}>
+      <Image className="default-img" src={image}></Image>
+      <Content className="content-construction">
         <FlexList flow="column" justifyContent="center">
           <div className="item">
             <svg
@@ -209,21 +203,37 @@ const DevBox = () => {
             <p>74 m²</p>
           </div>
         </FlexList>
-        <Info>
-          <h2>Reserva do tabuleiro</h2>
-          <small>Apartamentos</small>
-          <p>
-            Localizado de frente para a Serra do Tabuleiro em Palhoça/SC, é o
-            encontro perfeito do estilo de vida urbano com a natureza,
-            garantindo a qualidade de vida que você merece.
-          </p>
-          <Button onClick={() => navigateToDevelopment(1)} className="min">
-            Mais detalhes
-          </Button>
-        </Info>
+        {!toggleDetails &&
+          <Info>
+            <h2>{title}</h2>
+            <small>{subtitle}</small>
+            <p>{description}</p>
+            <Button onClick={() => showApartments()} className="min">
+              Mais detalhes
+              </Button>
+          </Info>
+        }
+        {toggleDetails && (
+          <div className="details-area">
+            <div className="close-icon" onClick={() => showApartments(false)}>
+              <div></div>
+            </div>
+            <FlexList className="apartment-list" flow="column" justifyContent="center">
+              {apartments.map((apartment, index) => {
+                return (
+                  <Apartment
+                    key={index}
+                    onClick={() => toApartment(index)}
+                    className={toggleDetails ? 'show' : ''}>
+                    {apartment.title}
+                  </Apartment>
+                )
+              })}
+            </FlexList>
+          </div>
+        )
+        }
       </Content>
-    </BoxDevelopment>
+    </DevelopmentBox>
   )
 }
-
-export default Developments

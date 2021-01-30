@@ -20,12 +20,54 @@ export const DevelopmentBox = styled.div`
   }
   &.hide-info {
     .default-img {
-      transform: translate3d(-100px, 0, 0);
+      /* transition: .3s;
+      transform: translate3d(-50px, 0, 0) scale(1.2); */
       box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.15);
     }
+    /* .item {
+      transform: translate3d(-85px, 0, 0);
+    } */
   }
-  .apartment-list {
-    height: 300px;
+  .details-area {
+    position: relative;
+    .apartment-list {
+      width: 100%;
+      transition: .3s;
+      position: relative;
+      padding-left: 55px;
+      @media (max-width: 900px) {
+        padding-left: 15px;
+      }
+      @media (max-width: 390px) {
+        padding-left: 5px;
+      }
+    }
+    .close-icon {
+      width: 30px;
+      height: 30px;
+      background: #FFF;
+      position: absolute;
+      top: 25px;
+      left: 5px;
+      border-radius: 50%;
+      border: solid 2px #ddd;
+      z-index: 99;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      div {
+        width: 100%;
+        height: 2px;
+        background: #ddd;
+        z-index: 999;
+      }
+      @media (max-width: 900px) {
+        left: inherit;
+        right: 35px;
+      }
+    }
   }
   .content-construction {
     transition: .3s;
@@ -48,7 +90,6 @@ export const Image = styled.img`
   width: 50%;
   margin: 0;
   position: relative;
-  transition: .3s;
   @media (max-width: 900px) {
     width: 100%;
   }
@@ -59,8 +100,8 @@ export const Content = styled.div`
   padding-left: 20px;
   display: grid;
   grid-template-columns: 100px 1fr;
-
   .item {
+    transition: .3s;
     grid-column: 1/2;
     width: 80px;
     height: 80px;
@@ -115,7 +156,36 @@ export const Info = styled.div`
     font-size: 0.851em;
   }
 `
-
-export const Apartment = styled.li`
-
+export const Apartment = styled.div`
+  padding: 5px 20px;
+  width: 80%;
+  position: relative;
+  /* transform: translate3d(-100px, 0, 0); */
+  margin: 10px 0px;
+  font-weight: bolder;
+  color: #666;
+  border: solid 1px #DDD;
+  cursor: pointer;
+  transition: .3s;
+  opacity: 0;
+  min-width: 140px;
+  &.show {
+    opacity: 1;
+  }
+  &:hover {
+    background-color: rgba(250, 250, 250, 0.13);
+    box-shadow: 0px 0px 20px -10px rgba(0, 0, 0, 0.29);
+    color: #222;
+    &::before {
+      background-color: #FFF;
+    }
+  }
+  @media (max-width: 900px) {
+    margin: 5px 0px;
+    width: 85%;
+    padding: 5px 10px;
+  }
+  @media (max-width: 390px) {
+    font-size: .74em;
+  }
 `

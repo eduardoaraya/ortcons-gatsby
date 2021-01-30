@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react"
-import Layout from "../../components/layout"
-
+import { graphql, useStaticQuery } from "gatsby"
+import Map from "../../../components/map/map"
+import FormHaveInterest from "../../../components/form-have-interest/FormHaveInterest"
+import Layout from "../../../components/layout"
+import { Grid, FlexList, Button } from "../../../theme/styled"
 import {
   SectionDevelopment,
   Box,
@@ -9,18 +12,14 @@ import {
   MinImage,
   ListMin,
   SectionMap,
-} from "../../styles-pages/development-styled"
-import { Grid, FlexList, Button } from "../../shared/styled-shared"
-import Map from "../../components/map/map"
-import FormHaveInterest from "../../components/form-have-interest/FormHaveInterest"
-import { graphql, useStaticQuery } from "gatsby"
+} from "./styled"
 
-const Development = () => {
+const Apartment = () => {
   const data = useStaticQuery(graphql`
     query Image {
       images:allFile(filter:{
         relativeDirectory:{
-          eq:"developments/1"
+          eq: "developments/1"
         }
       }){
         nodes {
@@ -57,7 +56,7 @@ const Development = () => {
       setArrayImages(imgs)
     }
     getImgs()
-  },[])
+  }, [])
 
   const handleClickImage = id => {
     return setImageActive(arrayImages.find(item => item.id === id))
@@ -330,7 +329,6 @@ const Development = () => {
                     strokeLinejoin="round"
                   />
                 </svg>
-
                 <p>74 m²</p>
               </div>
             </FlexList>
@@ -344,7 +342,7 @@ const Development = () => {
         </Grid>
       </SectionMap>
     </Layout>
-  )
+  );
 }
 
-export default Development
+export default Apartment;

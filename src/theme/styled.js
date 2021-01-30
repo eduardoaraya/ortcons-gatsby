@@ -32,12 +32,13 @@ export const Flex = styled.div`
   height: 100%;
 `
 
-export const FlexList = styled.div`
+export const FlexList = styled.ul`
   display: flex;
   margin: 0;
   position: relative;
   height: 100%;
   flex-direction: ${props => props.flow};
+  flex-wrap: ${props => props.wrap ? 'wrap' : 'no-wrap'};
   padding: 0;
   list-style: none;
   justify-content: ${props =>
@@ -195,8 +196,7 @@ export const CallAction = styled.div`
 
 export const Box = styled.div`
   position: relative;
-  background: url(${props =>
-    props.backgroundImage ? props.backgroundImage : "#E5E5E5"});
+  background: url(${props => props.backgroundImage ? props.backgroundImage : "#E5E5E5"});
   display: block;
   width: ${props => props.width};
   height: ${props => props.height};

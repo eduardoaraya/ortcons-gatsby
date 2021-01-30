@@ -8,7 +8,7 @@ import {
   Box,
   SectionAbout,
   WrapperAboutText,
-} from "../../styles-pages/home-styled"
+} from "./styled";
 
 import {
   Container,
@@ -17,11 +17,13 @@ import {
   CallAction,
   FlexCenter,
   TitleAbout,
-} from "../../shared/styled-shared"
+} from "../../theme/styled"
+
 import Rectangle1 from "../../assets/imgs/Rectangle1.png"
 import Rectangle2 from "../../assets/imgs/Rectangle2.png"
 import Layout from "../../components/layout"
 import { navigate } from "@reach/router"
+
 export default function Home() {
   // const navigation  = useNavigation();
   return (
@@ -32,19 +34,16 @@ export default function Home() {
           <Box className="filter-black" backgroundImage={Rectangle1}>
             <FlexCenter>
               <CallAction border="solid 2px #FFF">
-                <Link to="developments">Nome do empreendimento</Link>
+                <Link to="constructions">Nome do empreendimento</Link>
                 <svg
                   className="icon"
                   width="16"
                   height="16"
                   viewBox="0 0 16 16"
                   fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
-                    fill="white"
-                  />
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 0L6.59 1.41L12.17 7H0V9H12.17L6.59 14.59L8 16L16 8L8 0Z"
+                    fill="white" />
                 </svg>
               </CallAction>
             </FlexCenter>
@@ -81,7 +80,7 @@ export default function Home() {
                   background="#F6A500"
                   color="#FFF"
                   width="200px"
-                  fontSize=".85em"  
+                  fontSize=".85em"
                 >
                   Saiba Mais
                   <svg
